@@ -1,0 +1,80 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom, #ff9a9e, #fecfef);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.title {
+    font-size: 2.5rem;
+    color: #ff6f91;
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.video-container {
+    position: relative;
+    margin: 20px 0;
+    border: 3px solid #ff6f91;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.video {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.caption {
+    font-size: 1.2rem;
+    color: #333;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+/* Animated Hearts */
+body::before, body::after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    animation: float 6s infinite ease-in-out;
+}
+
+body::before {
+    top: -50px;
+    left: 20%;
+    animation-delay: 2s;
+}
+
+body::after {
+    bottom: -50px;
+    right: 20%;
+    animation-delay: 4s;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
